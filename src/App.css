@@ -1,14 +1,23 @@
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-glass);
+  padding: 1rem 2rem;
+  margin: 0 -2rem 2rem -2rem;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0 3rem;
 }
 
 .logo {
@@ -49,7 +58,32 @@
 }
 
 .content-area {
-  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-section {
+  min-height: 100vh;
+  padding-top: 80px; /* Offset for sticky nav */
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-title p {
+  color: var(--text-secondary);
+  font-family: var(--font-main);
 }
 
 /* Phase 2 Additions */
