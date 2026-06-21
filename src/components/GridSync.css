@@ -1,0 +1,142 @@
+.gridsync-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+}
+
+.grid-status, .scheduler-pane {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.intensity-meter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.meter-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 8px solid var(--accent-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+}
+
+.meter-circle .value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-green);
+}
+
+.meter-circle .label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.ai-insight {
+  text-align: center;
+  color: #6ee7b7;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--accent-teal);
+}
+
+.energy-mix {
+  height: 12px;
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #333;
+}
+
+.mix-bar {
+  height: 100%;
+}
+
+.mix-bar.solar { background: #fbbf24; }
+.mix-bar.wind { background: #38bdf8; }
+.mix-bar.coal { background: #ef4444; }
+
+.mix-labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.solar-dot { background: #fbbf24; }
+.wind-dot { background: #38bdf8; }
+.coal-dot { background: #ef4444; }
+
+.appliance-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.appliance-selector select {
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: rgba(0,0,0,0.3);
+}
+
+.schedule-result {
+  text-align: center;
+  background: rgba(255,255,255,0.02);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+}
+
+.time-display {
+  margin: 1.5rem 0;
+}
+
+.time-display .time {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.schedule-result button {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

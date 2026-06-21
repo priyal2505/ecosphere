@@ -1,0 +1,111 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 3rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 1rem;
+  background: var(--bg-secondary);
+  padding: 0.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-glass);
+}
+
+.tab-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-main);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  background: var(--bg-glass);
+  color: var(--text-primary);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.content-area {
+  min-height: 60vh;
+}
+
+/* Phase 2 Additions */
+.editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tool-select {
+  padding: 0.5rem;
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+.active-dot {
+  width: 10px; height: 10px; border-radius: 50%; background: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+}
+.rag-context {
+  margin-bottom: 1rem; color: #a1a1aa; border-bottom: 1px solid #333; padding-bottom: 0.5rem;
+}
+
+.langgraph-visualizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px dashed var(--accent-teal);
+}
+.agent-node {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--border-glass);
+}
+.forecast-timeline {
+  margin-top: 2rem;
+}
+.timeline-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 60px;
+  margin-top: 1rem;
+  border-bottom: 1px solid #333;
+}
+.t-bar {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  transition: height 0.3s ease;
+}
